@@ -20,8 +20,11 @@ public class MyBinaryTree {
         bst.insert(63);
         bst.insert(67);
         //print the BST
-        System.out.println("The BST Created with input data(Left-root-right):");
+        System.out.println("The BST Created with input data(Left-root-right): ");
         bst.inorder();
+        boolean ret_val = bst.search (63);
+        System.out.println("\nKey 63 found in BST: " + ret_val );
     }
 }
+
 

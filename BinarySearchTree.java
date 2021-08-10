@@ -77,4 +77,23 @@ public class BinarySearchTree {
             inorder_Recursive(root.right);
         }
     }
+    boolean search(int key)  {
+        root = search_Recursive(root, key);
+        if (root!= null)
+            return true;
+        else
+            return false;
+    }
+
+    //recursive insert function
+    Node search_Recursive(Node root, int key)  {
+        // Base Cases: root is null or key is present at root
+        if (root==null || root.key==key)
+            return root;
+        // val is greater than root's key
+        if (root.key > key)
+            return search_Recursive(root.left, key);
+        // val is less than root's key
+        return search_Recursive(root.right, key);
+    }
 }
